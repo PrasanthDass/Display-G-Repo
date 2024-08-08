@@ -1,0 +1,112 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff4081,#0dedb9,#e313dc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    color: #333;
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+}
+@keyframes gradientBackground{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.show {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.hide {
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+}
+
+p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: calc(100% - 22px); /* accounting for padding and border */
+}
+
+input {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    background-color: #e0f7fa;
+}
+
+a {
+    text-decoration: none;
+    color: #0366d6;
+    font-weight: bold;
+    display: block;
+}
